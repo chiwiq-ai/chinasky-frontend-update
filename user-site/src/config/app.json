@@ -1,0 +1,14 @@
+{
+  "appName": "China Sky",
+  "appSubtitle": "Supermarket",
+  "currency": "₦",
+  "currencyCode": "NGN",
+  "locale": "en-NG",
+  "apiBaseUrl": "/api",
+  "useMockData": true,
+  "freeDeliveryThreshold": 50000,
+  "topBarMessage": "Free Delivery on orders over ₦50,000",
+  "pagination": {
+    "productsPerPage": 6
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "header": [
+    { "key": "shop", "label": "Shop", "type": "mega" },
+    { "key": "specials", "label": "Specials", "type": "specials" },
+    { "key": "ways", "label": "Ways To Shop", "type": "ways" },
+    { "key": "recent", "label": "Recently Viewed", "type": "recent" }
+  ],
+  "specialTabs": [
+    "Weekly Deals",
+    "Buy 1 Get 1",
+    "Seasonal Bundles",
+    "Flash Sale"
+  ],
+  "trustItems": [
+    { "icon": "Truck", "label": "Fast Delivery", "sub": "Quick & reliable shipping" },
+    { "icon": "ShieldCheck", "label": "Secure Payments", "sub": "Safe checkout guaranteed" },
+    { "icon": "Headphones", "label": "Expert Support", "sub": "24/7 customer service" },
+    { "icon": "Leaf", "label": "Eco Friendly", "sub": "Sustainable packaging" }
+  ],
+  "footer": {
+    "shop": [
+      { "label": "Specials", "to": "/products" },
+      { "label": "Bakery", "to": "/products" },
+      { "label": "Groceries", "to": "/products" },
+      { "label": "Electronics", "to": "/products" }
+    ],
+    "support": [
+      { "label": "About Us", "to": "#" },
+      { "label": "Shipping Policy", "to": "#" },
+      { "label": "Returns", "to": "#" },
+      { "label": "Contact Us", "to": "#" }
+    ]
+  },
+  "accountNav": [
+    { "to": "/account", "label": "Dashboard", "icon": "LayoutGrid" },
+    { "to": "/account/orders", "label": "Orders", "icon": "Package" },
+    { "to": "/account/addresses", "label": "Address Book", "icon": "MapPin" },
+    { "to": "#", "label": "Wishlist", "icon": "Heart" }
+  ]
+}
