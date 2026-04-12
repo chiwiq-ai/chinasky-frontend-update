@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as Icons from 'lucide-react';
-import { Truck, ShieldCheck, Headphones, Leaf, MapPin, Clock, ArrowRight, LayoutGrid, ChevronRight } from 'lucide-react';
+import { Truck, ShieldCheck, Headphones, Leaf, MapPin, Clock, ArrowRight, ChevronRight } from 'lucide-react';
 import { formatPrice } from '../data/products';
 import { fetchProducts, fetchCategories } from '../services/api';
 import ProductCard from '../components/common/ProductCard';
@@ -79,30 +79,21 @@ export default function HomePage() {
         <div className="hero-inner">
           <div className="hero-text">
             <h1>Fresh from<br />the farm</h1>
-            <p>Get the freshest produce, pantry staples,<br />and household essentials delivered fast.</p>
+            <p>Get the freshest produce, pantry staples, and household essentials delivered fast.</p>
             <button className="hero-btn" onClick={() => navigate('/products')}>
-              SHOP ESSENTIALS
+              Shop Essentials
             </button>
           </div>
           <div className="hero-images">
-            <div className="hero-main-img">
-              <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=600" alt="Fresh tomatoes in basket" />
-            </div>
+            <img src="/images/hero-tomatoes.png" alt="Fresh tomatoes in basket" className="hero-main-img" />
           </div>
-        </div>
-        <div className="hero-dots">
-          <div className="hero-dots-nav">
-            <button className="hero-nav-icon" aria-label="Grid view">
-              <LayoutGrid size={14} />
+          <div className="hero-nav-pill">
+            <button className="hero-nav-arrow" onClick={() => setHeroSlide(prev => Math.max(0, prev - 1))} aria-label="Previous slide">
+              <ChevronRight size={16} style={{ transform: 'rotate(180deg)' }} />
             </button>
-            <button className="hero-nav-icon" aria-label="Next slide">
-              <ChevronRight size={14} />
+            <button className="hero-nav-arrow" onClick={() => setHeroSlide(prev => Math.min(3, prev + 1))} aria-label="Next slide">
+              <ChevronRight size={16} />
             </button>
-          </div>
-          <div className="hero-dots-indicators">
-            {[0, 1, 2, 3, 4].map(i => (
-              <span key={i} className={i === heroSlide ? 'active' : ''} onClick={() => setHeroSlide(i)} />
-            ))}
           </div>
         </div>
       </section>
@@ -134,7 +125,7 @@ export default function HomePage() {
                 {categoryImages[cat.name] ? (
                   <img src={categoryImages[cat.name]} alt={cat.name} className="cat-img" />
                 ) : (
-                  <span className="cat-emoji">{cat.icon}</span>
+                  <div className="cat-placeholder" />
                 )}
               </div>
               <span>{cat.name}</span>

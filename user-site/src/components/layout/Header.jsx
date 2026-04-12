@@ -148,7 +148,7 @@ export default function Header() {
                       className={`mega-cat-item ${i === activeCat ? 'active' : ''}`}
                       onMouseEnter={() => setActiveCat(i)}
                     >
-                      {cat.icon} {cat.name}
+                      {cat.name}
                     </button>
                   ))}
                 </div>
