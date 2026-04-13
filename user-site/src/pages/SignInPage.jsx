@@ -80,7 +80,7 @@ export default function SignInPage() {
                 required
               />
             </div>
-            <a href="#" className="auth-forgot">Forgot Password?</a>
+            <Link to="/forgot-password" className="auth-forgot">Forgot Password?</Link>
           </div>
 
           {errorMessage && (
